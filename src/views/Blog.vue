@@ -1,8 +1,11 @@
 <template>
     <Titulo  texto="Título de Blog" />
-    <button @click="consumirApi">Consumir API</button> <!--Botón para llamar metodo consumir api-->
+    <!--<button @click="consumirApi">Consumir API</button>--> <!--Botón para llamar metodo consumir api-->
+    
     <div v-for="item in arrayBlog" :key="item.id"><!--Ciclo para imprimir los títulos del array -->
-        {{ item.title }}
+        <router-link :to="`/blog/${item.id}`">
+                {{ item.id }} - {{ item.title }}
+        </router-link>
     </div>
 </template>
 
@@ -29,6 +32,9 @@
                 console.log(error)/*imprime error en caso de haberlo */
             }
         }
+    },
+    created(){ /*hacer que cargue primero el método que el template */
+        this.consumirApi()
     }
   }
 </script>
