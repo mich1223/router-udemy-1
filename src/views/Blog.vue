@@ -1,4 +1,5 @@
 <template>
+
     <Titulo  texto="Título de Blog" />
 </template>
 
