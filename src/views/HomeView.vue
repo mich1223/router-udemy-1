@@ -1,8 +1,9 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <Titulo texto="Página de Inicio"/>
-    
+
+    <Titulo texto="Título" />
+
   </div>
 </template>
 
@@ -12,7 +13,8 @@ import Titulo from '../components/Titulo'
 export default {
   name: 'HomeView',
   components: {
-   Titulo
+
+    Titulo
   }
 }
 </script>

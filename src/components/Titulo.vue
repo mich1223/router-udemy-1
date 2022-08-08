@@ -1,14 +1,17 @@
 <template>
-    <h1>{{ texto }}</h1>
+
+    <h1>{{texto}}</h1>
 </template>
 
-<script >
+<script>
 export default{
-    texto: String
+    props:{
+        texto: String
+    }
 }
-
 </script>
 
-<style >
+
+<style>
 
 </style>
